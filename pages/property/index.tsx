@@ -1,9 +1,13 @@
-const PropertyDetails = () => {
-    console.log("Rendering PropertyDetails component");
-    return (
-      <div>
-        <h1>Property Details</h1>
-      </div>
+import withLayoutBasic from "@/libs/components/layout/LayoutBasic";
+import { Container, Stack } from "@mui/material";
+import { NextPage } from "next";
+
+
+const PropertyList: NextPage = () => {
+    return(
+     <>
+        <Container>PROPERTY LIST</Container>
+     </>
     );
-}
-export default PropertyDetails;
+};
+export default withLayoutBasic (PropertyList);

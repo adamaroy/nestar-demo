@@ -1,9 +1,16 @@
-const CommunityDetail = () => {
-  console.log("CommunityDetail component rendered");
+import { useState } from "react";
+import { NextPage } from "next";
+import withLayoutBasic from "@/libs/components/layout/LayoutBasic";
+
+const Community: NextPage = () => {
+  const [title,setTitle]= useState<string>("Hello")
   return (
     <div>
-      <h1>Community Details</h1>
+      COMMUNITY{""}
+      <button onClick={()=>alert("HELLO MIT")} style={{margin:"15px"}}>
+        PressMe
+      </button>
     </div>
   );
-}
-export default CommunityDetail;
+};
+export default withLayoutBasic(Community);
