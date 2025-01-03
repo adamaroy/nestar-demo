@@ -1,9 +1,11 @@
 import React from "react";
-import { Box, Typography } from "@mui/material";
+import { Divider, IconButton, Typography, Stack, Box } from "@mui/material";
+import FavoriteIcon from "@mui/icons-material/Favorite";
+import RemoveRedEyeIcon from "@mui/icons-material/RemoveRedEye";
 
 const TrendPropertyCard = () => {
   return (
-    <Box className="trend-card-box">
+    <Stack className={"trend-card-box"}>
       <Box
         className="card-img"
         style={{
@@ -12,7 +14,7 @@ const TrendPropertyCard = () => {
       >
         <div className="status">
           <img src="/img/icons/electricity.svg" alt="" />
-          <span>Top</span>
+          <span>Trend</span>
         </div>
         <div className="price">$420000</div>
       </Box>
@@ -33,15 +35,22 @@ const TrendPropertyCard = () => {
             <span>220 m2</span>
           </div>
         </div>
-        <Box mt="15px" mb="17px" className="bott">
+        <Divider sx={{mt:"15px", m:"17px"}}/>
+            <div className="bott">
           <p>Rent</p>
           <div className="view-like-box">
-            <span className="view-cnt">120 views</span>
-            <span className="view-cnt">50 likes</span>
+            <IconButton color="default">
+              <RemoveRedEyeIcon />
+            </IconButton>
+            <Typography className="view-cnt">120</Typography>
+            <IconButton color="default">
+              <FavoriteIcon style={{color:"red"}} />
+            </IconButton>
+            <Typography className="view-cnt">200</Typography>
+          </div>
           </div>
         </Box>
-      </Box>
-    </Box>
+      </Stack>
   );
 };
 

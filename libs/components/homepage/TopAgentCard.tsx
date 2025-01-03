@@ -1,29 +1,18 @@
 import React from "react";
-import { Stack, Box, Typography, IconButton } from "@mui/material";
-import ArrowBackIosNewIcon from "@mui/icons-material/ArrowBackIosNew";
+import IconButton from "@mui/material/IconButton";
+import FavoriteIcon from "@mui/icons-material/Favorite";
+import RemoveRedEyeIcon from "@mui/icons-material/RemoveRedEye";
+import { Box, Divider, Stack, Typography } from "@mui/material";
 
 const TopAgentCard = () => {
   return (
-    <Stack className="top-agent-card">
-      <Box
-        className="agent-img"
-        style={{
-          backgroundImage: "url('/img/profile/agent.png')",
-        }}
-      ></Box>
-      <Typography className="agent-name">John Doe</Typography>
-      <Box className="agent-details">
-        <p className="agent-role">Real Estate Agent</p>
-        <p className="agent-location">Seoul, South Korea</p>
-      </Box>
-      <Box className="social-icons">
-        <IconButton color="default">
-          <ArrowBackIosNewIcon />
-        </IconButton>
-        <Typography className="agent-cnt">Followers: 500</Typography>
-      </Box>
+    <Stack className={"top-agent-card"}>
+      <div>
+        <img src="/img/profile/girl.svg" alt="" />
+      </div>
+      <strong>Martin</strong>
+      <span>Agent</span>
     </Stack>
   );
 };
-
 export default TopAgentCard;

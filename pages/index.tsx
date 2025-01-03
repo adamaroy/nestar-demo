@@ -1,4 +1,4 @@
-import TrendProperties from "@/libs/components/homepage/TrendPropertyCard";
+import TrendProperties from "@/libs/components/homepage/TrendProperties";
 import withLayoutMain from "@/libs/components/layout/LayoutHome";
 import { Stack } from "@mui/material";
 import PopularProperties from "@/libs/components/homepage/PopularProperties";
