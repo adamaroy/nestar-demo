@@ -6,6 +6,7 @@ import  Top  from "./Top";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
+import React from "react";
 
 const withLayoutMain = (Component: any) => {
   return (props: any) => {

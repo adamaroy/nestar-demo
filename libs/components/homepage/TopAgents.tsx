@@ -1,8 +1,9 @@
 import React, { useState } from "react";
 import { Stack, Box } from "@mui/material";
 import ArrowBackIosNewIcon from "@mui/icons-material/ArrowBackIosNew";
-import { Swiper, SwiperSlide } from "swiper/react";
 import TopAgentCard from "./TopAgentCard";
+import { Swiper, SwiperSlide } from 'swiper/react';
+import 'swiper/swiper-bundle.min.css';
 
 const TopAgents = () => {
   const [topAgents, setTopAgents] = useState<number[]>([1, 2, 3, 4, 5, 6, 7]);
