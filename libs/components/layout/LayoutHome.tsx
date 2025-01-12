@@ -1,19 +1,18 @@
-/* eslint-disable react/display-name */
 import { Stack } from "@mui/material";
 import Head from "next/head";
 import Top from "../Top";
 import Footer from "../Footer";
 import HeaderFilter from "../homepage/HeaderFilter";
-import useDeviceDetect from "../hooks/useDeviceDetect";
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
+import useDeviceDetect from "../hooks/useDeviceDetect";
 
 const withLayoutMain = (Component: any) => {
   return (props: any) => {
     const device = useDeviceDetect();
 
-    if (device == "mobile") {
+    if (device === "mobile") {
       return (
         <>
           <Head>
@@ -63,4 +62,5 @@ const withLayoutMain = (Component: any) => {
     }
   };
 };
+
 export default withLayoutMain;

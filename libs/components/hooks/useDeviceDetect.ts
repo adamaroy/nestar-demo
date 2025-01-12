@@ -1,12 +1,12 @@
 import { useEffect, useState } from "react";
 
 const useDeviceDetect = (): string => {
-  const [device, setDevice] = useState("desktop");
+  const [device, setDevice] = useState<string>("desktop");
 
   useEffect(() => {
     const userAgent = navigator.userAgent;
     const isMobile =
-      /Androind|webOs|iPhone|iPad|BlackBerry|IEMobile|Opera Mini/i.test(
+      /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
         userAgent
       );
     setDevice(isMobile ? "mobile" : "desktop");

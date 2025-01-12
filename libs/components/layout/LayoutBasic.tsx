@@ -1,8 +1,7 @@
-/* eslint-disable react/display-name */
-import Head from "next/head";
 import { Stack } from "@mui/material";
+import Head from "next/head";
 import Top from "../Top";
-import { ST } from "next/dist/shared/lib/utils";
+import HeaderFilter from "../homepage/HeaderFilter";
 import Footer from "../Footer";
 import useDeviceDetect from "../hooks/useDeviceDetect";
 
@@ -10,7 +9,7 @@ const withLayoutBasic = (Component: any) => {
   return (props: any) => {
     const device = useDeviceDetect();
 
-    if (device == "mobile") {
+    if (device === "mobile") {
       return (
         <>
           <Head>
@@ -41,11 +40,10 @@ const withLayoutBasic = (Component: any) => {
             <Stack id={"top"}>
               <Top />
             </Stack>
-
             <Stack
               className={"header-basic"}
               style={{
-                backgroundImage: `url(/img/banner/properties.png)`,
+                backgroundImage: `url('/img/banner/properties.png')`,
                 backgroundSize: "cover",
                 boxShadow: "inset 10px 40px 150px 40px rgb(24 22 36)",
               }}

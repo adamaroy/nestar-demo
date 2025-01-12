@@ -1,14 +1,16 @@
-import { Logout } from "@mui/icons-material";
-import { Box, Menu, MenuItem, Stack } from "@mui/material";
+import { Box, Stack } from "@mui/material";
 import Link from "next/link";
+import { Logout } from "@mui/icons-material";
+import MenuItem from "@mui/material/MenuItem";
+import Menu from "@mui/material/Menu";
 import useDeviceDetect from "./hooks/useDeviceDetect";
 
 const Top = () => {
   const device = useDeviceDetect();
 
-  if (device == "mobile") {
+  if (device === "mobile") {
     return (
-      <Stack className={"navbar"}>
+      <Stack className="navbar">
         <Link href={"/"}>
           <div>Home</div>
         </Link>
@@ -18,7 +20,7 @@ const Top = () => {
         <Link href={"/agent"}>
           <div>Agents</div>
         </Link>
-        <Link href={"/community"}>
+        <Link href={"/community?articleCategory=FREE"}>
           <div>Community</div>
         </Link>
         <Link href={"/cs"}>
@@ -28,11 +30,11 @@ const Top = () => {
     );
   } else {
     return (
-      <Stack className={"navbar"}>
-        <Stack className={"navbar-main"}>
-          <Stack className={"container"}>
-            <Box component={"div"} className={"logo-box"}>
-              <Link href={"/"}>
+      <Stack className="navbar">
+        <Stack className="navbar-main">
+          <Stack className="container">
+            <Box component={"div"} className="logo-box">
+              <Link href="/">
                 <img src="/img/logo/logoWhite.svg" alt="" />
               </Link>
             </Box>
@@ -46,7 +48,7 @@ const Top = () => {
               <Link href={"/agent"}>
                 <div>Agents</div>
               </Link>
-              <Link href={"/community"}>
+              <Link href={"/community?articleCategory=FREE"}>
                 <div>Community</div>
               </Link>
               <Link href={"/cs"}>
@@ -58,15 +60,13 @@ const Top = () => {
                 <div className={"login-user"}>
                   <img src={"/img/profile/defaultUser.svg"} alt="" />
                 </div>
-
                 <Menu id="basic-menu" sx={{ mt: "5px" }} open={false}>
                   <MenuItem>
                     <Logout
                       fontSize="small"
                       style={{ color: "blue", marginRight: "10px" }}
-                    >
-                      Logout
-                    </Logout>
+                    />
+                    Logout
                   </MenuItem>
                 </Menu>
               </>
